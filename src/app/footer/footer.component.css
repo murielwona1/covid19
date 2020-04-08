@@ -1,0 +1,27 @@
+.footer{
+  background-color: #083763;
+  padding-top: 20px;
+  position: sticky ;
+  bottom: 0;
+  margin-top: 20px;
+}
+.social{
+  background-color: #0377c0;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  margin-top: 10px;
+}
+.text-color{
+  color: white;
+  font-weight: 100;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
+}
+.text-color-size{
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}

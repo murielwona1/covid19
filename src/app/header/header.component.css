@@ -1,0 +1,85 @@
+
+.btn-yellow {
+    background-color: #fbdd00;
+    color: black;
+    margin-left: 10px;
+    padding: 2px;
+    width: 160px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.container h1 {
+    font-size: 60px;
+    margin-top: -50px;
+}
+
+.border-left-line {
+    border-left: 5px solid white;
+    text-align: left;
+    padding: 50px;
+}
+
+.menu-row{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-menu{
+    background-color: #0038a5;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+.btn-menu-inactif{
+  background-color: #95b5f6;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+    .btn-yellow-div {
+        width: 500px;
+        float: left;
+        display: inline-flex;
+    }
+
+    .site-gouv-text {
+        display: inline-flex;
+        margin-top: 10px;
+        text-align: left;
+    }
+    .search-div {
+        padding-bottom: 35px;
+    }
+
+    .container h1 {
+        font-size: 15px;
+        margin-top: -50px;
+    }
+
+    .border-left-line{
+        text-align: left;
+        border-left: none;
+    }
+
+    .div-on-banner{
+        background-color: white;
+        color: black;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .container h1 {
+        font-size: 35px;
+        margin-top: -50px;
+        padding: 0px;
+    }
+}
