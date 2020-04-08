@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DitesNousComponent implements OnInit {
 
+  view: any;
   constructor() { }
 
   ngOnInit() {
   }
 
+  open(value) {
+    this.view = value;
+  }
 }

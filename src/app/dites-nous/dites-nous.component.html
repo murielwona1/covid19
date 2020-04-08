@@ -1,11 +1,14 @@
 <div class="mycontainer">
   <div class="row">
     <div class="col-md-9">
-      <div class="liste col-md-12">
+      <div class="liste col-md-12" (click)="open('situation')">
         <div class="row container-fluid">
           <h5 class="text-color">Situation du cameroun et à l'etranger </h5>
           <mat-icon aria-hidden="false" class="text-color" aria-label="Example home icon">navigate_next</mat-icon>
         </div>
+      </div>
+      <div *ngIf="view === 'situation'" class="container-fluid">
+        <app-situation></app-situation>
       </div>
       <div class="liste col-md-12">
         <div class="row container-fluid">

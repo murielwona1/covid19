@@ -1,8 +1,13 @@
 <br>
+<<<<<<< HEAD
 <div class="mycontainer" style="margin-left: 60px;">
   <div class="row">
+=======
+<div class="container">
+  <p style="text-align: center;font-size: 40ox;" *ngIf="gouvernements.length === 0"> Aucune donnée trouvée</p>
+  <div class="row" *ngIf="gouvernements.length != 0">
+>>>>>>> 7c7e346f879b379b9d10c55003219efc417f4281
     <div class="col-md-3">
-
       <div class="timeline">
         <div *ngIf="!btnReview" class="bton">
           <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
