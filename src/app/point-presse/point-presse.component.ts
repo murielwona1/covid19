@@ -24,7 +24,7 @@ export class PointPresseComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('api/publication/list-publication', offset, 'point de presse').then(result => {
+    this.provide.getAllDataLimit('api/publication/list-publication', offset, 'Point de presse').then(result => {
       this.points = result;
       console.log(this.points);
       this.activeIndex(0);
@@ -35,8 +35,7 @@ export class PointPresseComponent implements OnInit {
     this.btnReview = false;
     this.key = this.key + 3;
     this.getActualité(this.key);
-    this.points = [];
-    if ( this.points.length < 3 ) {
+    if (this.points.length < this.key) {
       this.btnPreview = true;
     }
   }

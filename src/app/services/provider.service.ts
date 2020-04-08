@@ -1,7 +1,8 @@
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const apiUrl = 'http://localhost:8000/';
+const apiUrl = `${environment.url}`;
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class ProviderService {
 
   getAllDataLimit(route: string, key: any, type: any) {
     return new Promise((resolve, reject) => {
-      const url = apiUrl + route + '/' + key + '/' + type ;
+      const url = apiUrl + route + '/' + key + '/' + type;
       this.http.get(url)
         .subscribe(res => {
           resolve(res);
