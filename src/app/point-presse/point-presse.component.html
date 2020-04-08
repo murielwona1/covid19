@@ -1,8 +1,8 @@
 <br>
 <div class="container-fluid" style="margin-left: 60px;">
-  <div class="row">
+  <p style="text-align: center;font-size: 40ox;" *ngIf="points.length === 0" > Aucune donnée trouvée</p>
+  <div class="row" *ngIf="points.length != 0">
     <div class="col-md-3">
-
       <div class="timeline">
         <div *ngIf="!btnReview" class="bton">
           <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">

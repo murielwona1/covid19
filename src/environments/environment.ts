@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url:"http://localhost/covid19backend/public/"
+  url:"http://localhost:8000/"
 };
 
 /*
