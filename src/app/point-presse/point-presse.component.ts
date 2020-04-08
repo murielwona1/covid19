@@ -24,7 +24,7 @@ export class PointPresseComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('api/publication/list-publication', offset, 'Point de presse').then(result => {
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'point de presse').then(result => {
       this.points = result;
       console.log(this.points);
       this.activeIndex(0);

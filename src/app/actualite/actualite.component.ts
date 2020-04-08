@@ -25,7 +25,7 @@ export class ActualiteComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('api/publication/list-publication', offset, 'actualité').then(result => {
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'actualité').then(result => {
       this.actualites = result;
       console.log(this.actualites);
       this.activeIndex(0);

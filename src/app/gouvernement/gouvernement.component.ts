@@ -24,7 +24,7 @@ export class GouvernementComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('api/publication/list-publication', offset, 'que fait le gouvernement').then(result => {
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'que fait le gouvernement').then(result => {
       this.gouvernements = result;
       console.log(this.gouvernements);
       this.activeIndex(0);

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url:"http://localhost/covid19backend/public/"
+  url: "https://innov237.com/covid19Api/public/api/"
 };
