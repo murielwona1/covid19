@@ -1,1 +1,32 @@
-<p>gouvernement works!</p>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <div class="timeline">
+        <div *ngIf="!btnReview" class="bton">
+          <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>arrow_drop_up</mat-icon>
+          </button>
+        </div>
+        <div class="containere righte" (click)="activeIndex(i)" *ngFor="let gouvernement of gouvernements; let i = index">
+          <div class="contente" (click)="activeIndex(i)">
+            <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}</p>
+          </div>
+        </div>
+        <div *ngIf="!btnPreview" class="bton">
+          <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <iframe height="150" [src]="urlSafe" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>{{data.libelle}}</h3>
+      <p>{{data.description}}</p>
+      <p>{{data.videos}}</p>
+    </div>
+  </div>
+</div>

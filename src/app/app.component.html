@@ -1,1 +1,69 @@
-<router-outlet></router-outlet>
+<div class="main">
+  <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" >
+      <p><button color='primary' mat-button (click)="sidenav.close()"><mat-icon>apps</mat-icon></button></p>
+      <div class="row" style="width: 25vw;">
+
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="header">
+        <div class="row">
+          <div class="col-9">
+            <div class="row">
+              <button color='primary' mat-icon-button (click)="sidenav.open()">
+                <mat-icon>apps</mat-icon>
+              </button>
+              <div [routerLink]="['/']" routerLinkActive="router-link-active">
+                <h1 class="titre">Coronavirus (COVID-19)</h1>
+              </div>
+              <div>
+                <h1 class="numero-vert" style="margin-top: 5px">
+                  <a href="tel:+237697900523">
+                    <img src="assets/images/call-icon.jpg" style="height: 35px;margin-left: 40px; margin-right: 10px ;">
+                    0800378222
+                  </a>
+                </h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="playstore-btn">
+                <img src="assets/images/icon-android.jpg" style="height:40px;">
+                <img src="assets/images/icon-apel.jpg" style="height:40px;">
+              </div>
+              <div class="btn-yellow-div" style="text-align:left; margin-top: 10px;">
+                <p style="display: inline-block;" class="btn-yellow">Soutien et dons</p>
+                <p style="display: inline-block;" [routerLink]="['/dites-nous']" routerLinkActive="router-link-active"  class="btn-yellow">Dites nous</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3" style="text-align: right;">
+            <img src="assets/images/logo-etat.jpg" style="height:100px;">
+          </div>
+        </div>
+        <div class="row" style="border-bottom: 2px solid  #0038a5; height: max-content; ">
+          <div style="text-align: left; margin-left: 10px;">
+            <p style="display: inline-block; cursor: pointer">FR</p>
+            <P style="display: inline-block; margin-left: 20px; cursor: pointer">EN</P>
+          </div>
+          <div class="search-div" style="width: 450px; height: 60px;">
+            <form class="form-inline">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher" aria-label="Search">
+            </form>
+
+          </div>
+          <div style="text-align: right; width: 100%; margin-top: -30px;" class="site-gouv-text">
+            <p style="color: #0038a5;">Site gouvernement du cameroun de lute contre le Coronavirus </p>
+          </div>
+        </div>
+      </div>
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+

@@ -1,78 +1,19 @@
-.header {
-    padding: 20px;
-}
-.titre,
-.numero-vert {
-    color: #0038a5;
-    font-size: 27px;
-    text-align: left;
-    cursor: pointer;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    padding-right: 0px;
-}
-.div-on-banner {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.199);
-    padding: 50px;
-    color: white;
-    text-align: center;
-    top: 25%;
-}
-
-.btn-yellow {
-    background-color: #fbdd00;
-    color: black;
-    margin-left: 10px;
-    padding: 2px;
-    width: 160px;
-    font-weight: bold;
-    text-align: center;
-
-}
-
-.container h1 {
-    font-size: 60px;
-    margin-top: -50px;
-}
-
-.border-left-line {
-    border-left: 5px solid white;
-    text-align: left;
-    padding: 50px;
-}
-
-.menu-row{
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.btn-menu{
-    background-color: #0038a5;
-    color: white;
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 2px;
-    cursor: pointer;
-}
-.btn-menu-inactif{
-  background-color: #95b5f6;
-    color: white;
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 2px;
-    cursor: pointer;
-}
-
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+}
+.position{
+  margin-left: 20px;
+}
+
+.bton::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1%;
+  margin-left: -8px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -125,6 +66,19 @@
   position: relative;
   border-radius: 6px;
 }
+.text{
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 5;
+  color:rgb(0, 9, 112);
+}
+
+.textInactif{
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 5;
+  color:rgb(106, 132, 226);
+}
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
@@ -151,44 +105,3 @@
   }
 }
 
-
-@media screen and (max-width: 850px) {
-    .btn-yellow-div {
-        width: 500px;
-        float: left;
-        display: inline-flex;
-    }
-
-    .site-gouv-text {
-        display: inline-flex;
-        margin-top: 10px;
-        text-align: left;
-    }
-    .search-div {
-        padding-bottom: 35px;
-    }
-
-    .container h1 {
-        font-size: 15px;
-        margin-top: -50px;
-    }
-
-    .border-left-line{
-        text-align: left;
-        border-left: none;
-    }
-
-    .div-on-banner{
-        background-color: white;
-        color: black;
-        position: relative;
-    }
-}
-
-@media screen and (max-width: 854px) {
-    .container h1 {
-        font-size: 35px;
-        margin-top: -50px;
-        padding: 0px;
-    }
-}
