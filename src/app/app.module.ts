@@ -18,6 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { DitesNousComponent } from './dites-nous/dites-nous.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SituationComponent } from './situation/situation.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     RessourceComponent,
     HeaderComponent,
     DitesNousComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent,
+    SituationComponent
   ],
   imports: [
     BrowserModule,

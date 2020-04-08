@@ -1,9 +1,9 @@
 <div class="main">
-  <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
-    <mat-sidenav #sidenav (keydown.escape)="close('escape')" >
+  <mat-sidenav-container  class="example-container" (backdropClick)="sidenav.close()">
+    <mat-sidenav style="padding: 10px 40px 10px 0px;" #sidenav (keydown.escape)="close('escape')" >
       <p><button color='primary' mat-button (click)="sidenav.close()"><mat-icon>apps</mat-icon></button></p>
-      <div class="row" style="width: 25vw;">
-
+      <div class="row " style="margin: 20px;">
+        <app-sidebar></app-sidebar>
       </div>
     </mat-sidenav>
 
