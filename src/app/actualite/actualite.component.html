@@ -23,13 +23,14 @@
         </div>
       </div>
     </div>
-    <div class="col-md-9" *ngIf="actualites.length !== 0">
-      <iframe height="150" [src]="urlSafe" frameborder="0"
+    <div class="col-md-9">
+      <img [src]="data.image" style="height: 200px;" alt="" srcset="" *ngIf="data.image!=null">
+      <iframe height="150" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <h3>{{data.libelle}}</h3>
-      <p>{{data.description}}</p>
+      <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
       <p>{{data.videos}}</p>
     </div>
+
   </div>
 </div>
-

@@ -48,6 +48,9 @@ import { SituationComponent } from './situation/situation.component';
     QuillModule.forRoot({
       modules: {
         syntax: true,
+        imageResize: {
+          displaySize: true
+        },
         toolbar: [
           ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
           ['blockquote', 'code-block'],
