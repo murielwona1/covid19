@@ -1,13 +1,12 @@
 <div class="main">
-<<<<<<< HEAD
   <mat-sidenav-container class="example-container" (backdropClick)="sidenav.close()">
-    <mat-sidenav #sidenav  >
-=======
-  <mat-sidenav-container  class="example-container" (backdropClick)="sidenav.close()">
-    <mat-sidenav style="padding: 10px 40px 10px 0px;" #sidenav (keydown.escape)="close('escape')" >
->>>>>>> 7c7e346f879b379b9d10c55003219efc417f4281
-      <p><button color='primary' mat-button (click)="sidenav.close()"><mat-icon>apps</mat-icon></button></p>
+    <mat-sidenav style="padding: 10px 40px 10px 0px;" #sidenav (keydown.escape)="close('escape')">
+
+      <p><button color='primary' mat-button (click)="sidenav.close()">
+          <mat-icon>apps</mat-icon>
+        </button></p>
       <div class="row " style="margin: 20px;">
+
         <app-sidebar></app-sidebar>
       </div>
     </mat-sidenav>
@@ -39,7 +38,8 @@
               </div>
               <div class="btn-yellow-div" style="text-align:left; margin-top: 10px;">
                 <p style="display: inline-block;" class="btn-yellow">Soutien et dons</p>
-                <p style="display: inline-block;" [routerLink]="['/dites-nous']" routerLinkActive="router-link-active"  class="btn-yellow">Dites nous</p>
+                <p style="display: inline-block;" [routerLink]="['/dites-nous']" routerLinkActive="router-link-active"
+                  class="btn-yellow">Dites nous</p>
               </div>
             </div>
           </div>
@@ -55,7 +55,8 @@
           <div class="search-div" style="width: 450px; height: 60px;">
             <form class="form-inline">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher" aria-label="Search">
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Rechercher"
+                aria-label="Search">
             </form>
 
           </div>
@@ -72,5 +73,3 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-

@@ -1,9 +1,10 @@
-.box{
+.box {
   padding: 5px;
-  background-color: #0E444E;
-  margin: 10px;
+  background-color: #007a5e;
+  margin: 0px 0px 10px 0px;
+  color: white;
 }
-.text-color{
+.text-color {
   color: white;
   margin: 0;
 }
