@@ -4,11 +4,8 @@
 
 export const environment = {
   production: false,
-<<<<<<< HEAD
   url: "https://innov237.com/covid19Api/public/api/"
-=======
-  url:"http://localhost:8000/"
->>>>>>> 7c7e346f879b379b9d10c55003219efc417f4281
+
 };
 
 /*
