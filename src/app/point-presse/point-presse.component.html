@@ -1,5 +1,5 @@
 <br>
-<div class="mycontainer" style="margin-left: 60px;">
+<div class="mycontainer">
   <p style="text-align: center;font-size: 40ox;" *ngIf="points.length === 0" > Aucune donnée trouvée</p>
   <div class="row" *ngIf="points.length != 0">
     <div class="col-md-3">
@@ -16,11 +16,6 @@
               {{point.updated_at | date:'mediumDate'}}</p>
           </div>
         </div>
-        <div *ngIf="!btnPreview" class="bton">
-          <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_drop_down</mat-icon>
-          </button>
-        </div>
       </div>
     </div>
     <div class="col-md-9">
@@ -31,4 +26,3 @@
       <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
     </div>
   </div>
-</div>

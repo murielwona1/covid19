@@ -20,6 +20,8 @@ import { DitesNousComponent } from './dites-nous/dites-nous.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SituationComponent } from './situation/situation.component';
+import { VotreSanteComponent } from './votre-sante/votre-sante.component';
+// import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { SituationComponent } from './situation/situation.component';
     DitesNousComponent,
     FooterComponent,
     SidebarComponent,
-    SituationComponent
+    SituationComponent,
+    VotreSanteComponent,
+    // AppSidebarComponent
   ],
   imports: [
     BrowserModule,

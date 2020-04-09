@@ -14,19 +14,13 @@
             <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}</p>
           </div>
         </div>
-        <div *ngIf="!btnPreview" class="bton">
-          <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_drop_down</mat-icon>
-          </button>
-        </div>
+      </div>
+      <div class="col-md-9">
+        <img [src]="data.image" style="height: 200px;" alt="" srcset="" *ngIf="data.image!=null">
+        <iframe height="150" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>{{data.libelle}}</h3>
+        <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
       </div>
     </div>
-    <div class="col-md-9">
-      <img [src]="data.image" style="height: 200px;" alt="" srcset="" *ngIf="data.image!=null">
-      <iframe height="150" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <h3>{{data.libelle}}</h3>
-      <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
-    </div>
   </div>
-</div>

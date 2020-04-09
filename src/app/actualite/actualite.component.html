@@ -1,13 +1,13 @@
 <br>
 
-<div class="container" >
+<div class="mycontainer" >
   <p style="text-align: center;font-size: 40ox;" *ngIf="actualites.length === 0"> Aucune donnée trouvée</p>
   <div class="row" *ngIf="actualites.length !== 0">
     <div class="col-md-3">
       <div class="timeline">
         <div *ngIf="!btnReview" class="bton">
           <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_drop_up</mat-icon>
+            <mat-icon></mat-icon>
           </button>
         </div>
         <div class="containere righte" (click)="activeIndex(i)" *ngFor="let actualite of actualites; let i = index">
@@ -19,7 +19,7 @@
         </div>
         <div *ngIf="!btnPreview" class="bton">
           <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_drop_down</mat-icon>
+            <mat-icon></mat-icon>
           </button>
         </div>
       </div>
@@ -31,6 +31,4 @@
       <h3>{{data.libelle}}</h3><br>
       <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
     </div>
-
   </div>
-</div>
