@@ -16,12 +16,12 @@ export class SituationComponent implements OnInit {
   }
 
   buildChart() {
-    var ctx = document.getElementById('myChart');
-    var myChart = new Chart(ctx, {
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['Personnes testées', 'Personnes hospitalisées', 'Cas confirmés', 'Personnes Guéries', 'Nombre de mort'],
-        datasets: [{ 
+        datasets: [{
           label: '# stat',
           data: [20, 10, 8, 5, 2, 3],
           backgroundColor: [

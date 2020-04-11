@@ -26,6 +26,29 @@
     </div>
   </div>
   <div class="social">
-
+    <div class="sheet">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header class="disable_ripple">
+          <mat-panel-title>
+            Assistance Virtuel COVID-19
+          </mat-panel-title>
+          <mat-panel-description>
+            <mat-icon>expand_more</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="conatiner size" *ngFor="let message of messages | async">
+          <div class="message" [ngClass]="{from: message.sendBy == 'bot',
+                                            to: message.sendBy == 'user'}">
+            {{message.content}}
+          </div>
+        </div>
+        <div class="conatiner row mt-4">
+          <input type="text" class="form-control col-md-10 mr-1" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
+          <button mat-icon-button class="col-md-1 ml-1" (click)="sendMessage()">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </div>
   </div>
 </div>

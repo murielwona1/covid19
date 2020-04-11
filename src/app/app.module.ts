@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SituationComponent } from './situation/situation.component';
 import { VotreSanteComponent } from './votre-sante/votre-sante.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 // import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 
 @NgModule({
@@ -49,6 +50,7 @@ import { VotreSanteComponent } from './votre-sante/votre-sante.component';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
+    MatExpansionModule,
     QuillModule.forRoot()
   ],
   providers: [],
