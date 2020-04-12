@@ -3,12 +3,18 @@
 </div>
 
 <br>
-<div class="mycontainer" *ngIf="actualites.length !== 0">
 
+<<<<<<< HEAD
   <div class="row">
     <div class="row" *ngIf="actualites.length !== 0">
     </div>
     <div class="col-md-3 col-sm-12">
+=======
+<div class="mycontainer" >
+  <p style="text-align: center;font-size: 40ox;" *ngIf="actualites.length === 0"> Aucune donnée trouvée</p>
+  <div class="row" *ngIf="actualites.length !== 0">
+    <div class="col-md-3">
+>>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
       <div class="timeline">
         <div *ngIf="!btnReview" class="bton">
           <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
@@ -36,5 +42,9 @@
       <h3>{{data.libelle}}</h3><br>
       <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
     </div>
+<<<<<<< HEAD
 
   </div>
+=======
+  </div>
+>>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
