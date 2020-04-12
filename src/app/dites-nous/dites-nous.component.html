@@ -55,13 +55,15 @@
           <mat-icon aria-hidden="false" class="text-color" aria-label="Example home icon">navigate_next</mat-icon>
         </div>
       </div>
-      <div class="liste col-md-12">
+      <div class="liste col-md-12" (click)="open('sources')">
         <div class="row container-fluid">
           <h5 class="text-color">Les ressources </h5>
           <mat-icon aria-hidden="false" class="text-color" aria-label="Example home icon">navigate_next</mat-icon>
         </div>
       </div>
-
+      <div *ngIf="view === 'sources'" class="container-fluid">
+        <app-sources></app-sources>
+      </div>
     </div>
     <div class="col-md-3">
       <a class="twitter-timeline" data-lang="fr" data-height="500" data-dnt="true" data-theme="light"

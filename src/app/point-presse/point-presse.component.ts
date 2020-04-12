@@ -15,6 +15,7 @@ export class PointPresseComponent implements OnInit {
   data: any;
   urlSafe: SafeResourceUrl;
   indexe = 0;
+  showLoarder: boolean = true;
 
   constructor(private provide: ProviderService, public sanitizer: DomSanitizer) {
     this.getActualité(this.key);
@@ -24,10 +25,13 @@ export class PointPresseComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('publication/list-publication', offset, 'point de presse').then(result => {
-      this.points = result;
-      console.log(this.points);
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'point de presse').then((result: any) => {
+      if (result.length > 0) {
+        this.points = result;
+      }
       this.activeIndex(0);
+
+      this.showLoarder = false;
     });
   }
 
@@ -35,8 +39,9 @@ export class PointPresseComponent implements OnInit {
     this.btnReview = false;
     this.key = this.key + 3;
     this.getActualité(this.key);
-    if (this.points.length < this.key) {
-      this.btnPreview = true;
+    if (this.points.length > 0) {
+      this.btnPreview = false;
+      console.log(this.points.length);
     }
   }
 

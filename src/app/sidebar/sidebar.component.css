@@ -2,5 +2,10 @@
   margin-left: 10px;
   margin-right: 20px;
   color: #0038a5;
-  font-size: medium;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.row{
+  margin-top: 30px;
 }

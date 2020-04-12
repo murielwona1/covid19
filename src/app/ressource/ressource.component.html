@@ -1,3 +1,157 @@
-<div class="card">
-    <p style="text-align: center; padding: 50px;">Module en cours de développement</p>
+<div class="loarder" *ngIf="showLoarder">
+    <app-loarder></app-loarder>
+</div>
+
+<br>
+<div class="mycontainer">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="timeline">
+                <div class="containere righte" (click)="setView('video')">
+                    <div class="contente">
+                        <p style="margin-bottom: 5px;">
+                            Vidéothèque</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="containere righte" (click)="setView('biblio')">
+                    <div class="contente">
+                        <p style="margin-bottom: 5px;">
+                            Biliothèque</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="containere righte" (click)="setView('galerie')">
+                    <div class="contente">
+                        <p style="margin-bottom: 5px;">
+                            Banque d'images</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12" *ngIf="viewMode=='video'">
+            <div class="card">
+                <div class="leftRow">
+                    <iframe width="300" class="video-responsive" height="200" src="https://www.youtube.com/embed/Yb3bm-bjvGY" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="rigthRow">
+                    <h1>CAMEROUN - CORONAVIRUS : MANAOUDA MALACHIE explique les mesures prises par le gouvernement</h1>
+                    <p>A la suite d'une réunion de crise ce jour à l'immeuble étoile à Yaoundé, le ministre de la santé
+                        publique a expliqué avant le Premier ministre un peu plus tard, les mesures que le gouvernement
+                        Camerounais entend prendre pour limiter la propagation de l'épidemie au Cameroun</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="leftRow">
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/mt6XUUUYPZc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="rigthRow">
+                    <h1>titre de l'annonce avec lorent</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae dolore impedit
+                        libero,
+                        autem eligendi, laudantium aspernatur placeat nihil molestiae id! Quis rerum recusandae
+                        officiis
+                        non nihil sapiente animi dignissimos!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="leftRow" style="float: left; width: 150px;">
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/mt6XUUUYPZc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="rigthRow" style="float: left; margin-left: 305px; margin-top: -160px;">
+                    <h1>titre de l'annonce avec lorent</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae dolore impedit
+                        libero,
+                        autem eligendi, laudantium aspernatur placeat nihil molestiae id! Quis rerum recusandae
+                        officiis
+                        non nihil sapiente animi dignissimos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12" *ngIf="viewMode=='biblio'">
+            <div class="card">
+                <div class="leftRow" style="float: left; width: 150px;">
+                    <img src="assets/images/image1.png" height="200px" width="300" alt="" srcset="">
+                </div>
+                <div class="rigthRow" style="float: left; margin-left: 305px; margin-top: -160px;">
+                    <h1>titre de l'annonce avec lorent</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae dolore impedit
+                        libero,
+                        autem eligendi, laudantium aspernatur placeat nihil molestiae id! Quis rerum recusandae
+                        officiis
+                        non nihil sapiente animi dignissimos!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="leftRow" style="float: left; width: 150px;">
+                    <img src="assets/images/image3.png" height="200px" width="300" alt="" srcset="">
+                </div>
+                <div class="rigthRow" style="float: left; margin-left: 305px; margin-top: -160px;">
+                    <h1>titre de l'annonce avec lorent</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae dolore impedit
+                        libero,
+                        autem eligendi, laudantium aspernatur placeat nihil molestiae id! Quis rerum recusandae
+                        officiis
+                        non nihil sapiente animi dignissimos!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="leftRow" style="float: left; width: 150px;">
+                    <img src="assets/images/image2.png" height="200px" width="300" alt="" srcset="">
+                </div>
+                <div class="rigthRow" style="float: left; margin-left: 305px; margin-top: -160px;">
+                    <h1>titre de l'annonce avec lorent</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae dolore impedit
+                        libero,
+                        autem eligendi, laudantium aspernatur placeat nihil molestiae id! Quis rerum recusandae
+                        officiis
+                        non nihil sapiente animi dignissimos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12" *ngIf="viewMode=='galerie'">
+            <div class="card">
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/images/image1.png" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image2.png" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image3.png" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image3.jpg" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image1.png" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image1.png" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/logo-etat.jpg" alt="" style="height: 200px;">
+                    </div>
+                    <div class="col">
+                        <img src="assets/images/image1.png" alt="" style="height: 200px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

@@ -16,6 +16,7 @@ export class ActualiteComponent implements OnInit {
   urlSafe: SafeResourceUrl;
   indexe = 0;
   actualites: any = [];
+  showLoarder: boolean = true;
 
   constructor(private provide: ProviderService, public sanitizer: DomSanitizer) {
     this.getActualité(this.key);
@@ -25,10 +26,13 @@ export class ActualiteComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('publication/list-publication', offset, 'actualité').then(result => {
-      this.actualites = result;
-      console.log(this.actualites);
-      this.activeIndex(0);
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'actualité').then((result: any) => {
+      if (result.length > 0) {
+        this.actualites = result;
+        this.activeIndex(0);
+      }
+
+      this.showLoarder = false;
     });
   }
 
@@ -36,9 +40,8 @@ export class ActualiteComponent implements OnInit {
     this.btnReview = false;
     this.key = this.key + 3;
     this.getActualité(this.key);
-    this.actualites = [];
-    if (this.actualites.length < 3) {
-      this.btnPreview = true;
+    if (this.actualites.length > 0) {
+      this.btnPreview = false;
     }
   }
 

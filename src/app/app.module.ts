@@ -21,6 +21,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SituationComponent } from './situation/situation.component';
 import { VotreSanteComponent } from './votre-sante/votre-sante.component';
+import { LoarderComponent } from './loarder/loarder.component';
+import { SourcesComponent } from './sources/sources.component';
 // import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 
 @NgModule({
@@ -37,6 +39,8 @@ import { VotreSanteComponent } from './votre-sante/votre-sante.component';
     SidebarComponent,
     SituationComponent,
     VotreSanteComponent,
+    LoarderComponent,
+    SourcesComponent,
     // AppSidebarComponent
   ],
   imports: [

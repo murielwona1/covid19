@@ -1,34 +1,39 @@
-<br>
-<div class="mycontainer" style="margin-left: 60px;">
-  <div class="row">
-    <div class="row" *ngIf="gouvernements.length != 0">
+<div class="loarder" *ngIf="showLoarder">
+  <app-loarder></app-loarder>
+</div>
 
-      <div class="col-md-3">
-        <div class="timeline">
-          <div *ngIf="!btnReview" class="bton">
-            <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
-              <mat-icon>arrow_drop_up</mat-icon>
-            </button>
-          </div>
-          <div class="containere righte" (click)="activeIndex(i)"
-            *ngFor="let gouvernement of gouvernements; let i = index">
-            <div class="contente" (click)="activeIndex(i)">
-              <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}</p>
-            </div>
-          </div>
-          <div *ngIf="!btnPreview" class="bton">
-            <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
-              <mat-icon>arrow_drop_down</mat-icon>
-            </button>
+<br>
+<div class="mycontainer">
+
+  <div class="row" *ngIf="gouvernements.length != 0">
+
+    <div class="col-md-3 col-sm-12">
+      <div class="timeline">
+        <div *ngIf="!btnReview" class="bton">
+          <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>arrow_drop_up</mat-icon>
+          </button>
+        </div>
+        <div class="containere righte" (click)="activeIndex(i)"
+          *ngFor="let gouvernement of gouvernements; let i = index">
+          <div class="contente" (click)="activeIndex(i)">
+            <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-9">
-        <img [src]="data.image" style="height: 200px;" alt="" srcset="" *ngIf="data.image!=null">
-        <iframe height="150" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3>{{data.libelle}}</h3>
-        <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
+        <div *ngIf="!btnPreview" class="bton">
+          <button (click)="preview()" mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+        </div>
       </div>
     </div>
+    <div class="col-md-9 col-sm-12">
+      <img [src]="data.image" class="responsive-image-news" style="height: 200px;" alt="" srcset=""
+        *ngIf="data.image!=null">
+      <iframe height="150" class="responsive-image-news" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>{{data.libelle}}</h3>
+      <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
+    </div>
   </div>
+</div>

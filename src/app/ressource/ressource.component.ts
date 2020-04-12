@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ressource.component.css']
 })
 export class RessourceComponent implements OnInit {
+  showLoarder: boolean = true;
+  viewMode = "video";
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.showLoarder = false;
+    }, 1000);
+  }
 
   ngOnInit() {
+  }
+
+  setView(view) {
+    this.viewMode = view;
   }
 
 }

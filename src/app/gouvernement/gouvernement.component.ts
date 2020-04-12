@@ -15,6 +15,7 @@ export class GouvernementComponent implements OnInit {
   data: any;
   urlSafe: SafeResourceUrl;
   indexe = 0;
+  showLoarder: boolean = true;
 
   constructor(private provide: ProviderService, public sanitizer: DomSanitizer) {
     this.getActualité(this.key);
@@ -24,10 +25,13 @@ export class GouvernementComponent implements OnInit {
   }
 
   getActualité(offset) {
-    this.provide.getAllDataLimit('publication/list-publication', offset, 'que fait le gouvernement').then(result => {
-      this.gouvernements = result;
-      console.log(this.gouvernements);
-      this.activeIndex(0);
+    this.provide.getAllDataLimit('publication/list-publication', offset, 'que fait le gouvernement').then((result: any) => {
+      if (result.length > 0) {
+        this.gouvernements = result;
+        this.activeIndex(0);
+      }
+
+      this.showLoarder = false;
     });
   }
 
@@ -35,9 +39,8 @@ export class GouvernementComponent implements OnInit {
     this.btnReview = false;
     this.key = this.key + 3;
     this.getActualité(this.key);
-    this.gouvernements = [];
-    if (this.gouvernements.length < 3) {
-      this.btnPreview = true;
+    if (this.gouvernements.length > 0) {
+      this.btnPreview = false;
     }
   }
 
