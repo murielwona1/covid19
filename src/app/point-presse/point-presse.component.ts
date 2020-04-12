@@ -30,7 +30,6 @@ export class PointPresseComponent implements OnInit {
         this.points = result;
       }
       this.activeIndex(0);
-
       this.showLoarder = false;
     });
   }

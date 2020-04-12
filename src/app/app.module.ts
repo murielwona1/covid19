@@ -21,12 +21,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SituationComponent } from './situation/situation.component';
 import { VotreSanteComponent } from './votre-sante/votre-sante.component';
-<<<<<<< HEAD
 import { LoarderComponent } from './loarder/loarder.component';
 import { SourcesComponent } from './sources/sources.component';
-=======
 import { MatExpansionModule } from '@angular/material/expansion';
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
 // import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 
 @NgModule({

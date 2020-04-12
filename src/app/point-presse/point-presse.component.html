@@ -4,11 +4,6 @@
 
 <br>
 <div class="mycontainer">
-<<<<<<< HEAD
-
-=======
-  <p style="text-align: center;font-size: 40ox;" *ngIf="points.length === 0" > Aucune donnée trouvée</p>
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
   <div class="row" *ngIf="points.length != 0">
     <div class="col-md-3">
       <div class="timeline">
@@ -33,17 +28,13 @@
     </div>
     <div class="col-md-9">
       <img [src]="data.image" style="height: 200px;" alt="" srcset="" *ngIf="data.image!=null">
-<<<<<<< HEAD
-      <iframe height="300" width="500" class="responsive-image-news" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
-=======
-      <iframe height="300" width="500" [src]="urlSafe" frameborder="0" *ngIf="data.videos!=null"
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe height="300" width="500" class="responsive-image-news" [src]="urlSafe" frameborder="0"
+        *ngIf="data.videos!=null" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
       <h3>{{data.libelle}}</h3>
       <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
     </div>
   </div>
-<<<<<<< HEAD
+
 </div>
-=======
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0

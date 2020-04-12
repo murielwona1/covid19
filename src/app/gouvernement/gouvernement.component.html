@@ -4,30 +4,22 @@
 
 <br>
 <div class="mycontainer">
-<<<<<<< HEAD
-
   <div class="row" *ngIf="gouvernements.length != 0">
 
     <div class="col-md-3 col-sm-12">
-=======
-  <p style="text-align: center;font-size: 40ox;" *ngIf="gouvernements.length === 0"> Aucune donnée trouvée</p>
-  <div class="row" *ngIf="gouvernements.length != 0">
-    <div class="col-md-3">
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
+
       <div class="timeline">
         <div *ngIf="!btnReview" class="bton">
           <button (click)="review()" mat-icon-button aria-label="Example icon-button with a heart icon">
             <mat-icon>arrow_drop_up</mat-icon>
           </button>
         </div>
-<<<<<<< HEAD
         <div class="containere righte" (click)="activeIndex(i)"
           *ngFor="let gouvernement of gouvernements; let i = index">
-=======
-        <div class="containere righte" (click)="activeIndex(i)" *ngFor="let gouvernement of gouvernements; let i = index">
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
+
           <div class="contente" (click)="activeIndex(i)">
-            <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}</p>
+            <p [className]="i === indexe?'text':'textInactif'" style="margin-bottom: 5px;">{{gouvernement.source}}
+            </p>
           </div>
         </div>
         <div *ngIf="!btnPreview" class="bton">
@@ -37,7 +29,7 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
+
     <div class="col-md-9 col-sm-12">
       <img [src]="data.image" class="responsive-image-news" style="height: 200px;" alt="" srcset=""
         *ngIf="data.image!=null">
@@ -46,8 +38,5 @@
       <h3>{{data.libelle}}</h3>
       <quill-view-html [content]="data.description" theme="snow"></quill-view-html>
     </div>
+
   </div>
-</div>
-=======
-  </div>
->>>>>>> 7860ec6d00ef16bee3e5f42980559db2c0faade0
